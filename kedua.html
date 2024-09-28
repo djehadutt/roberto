@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ini mah puisi buatan AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .puisi {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .puisi h2 {
+            color: #000;
+            font-weight: bold;
+            margin-top: 0;
+        }
+        audio {
+            width: 100%;
+            margin-top: 20px;
+        }
+        #playButton {
+            display: block;
+            margin: 20px auto 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #playButton:hover {
+            background-color: #2980b9;
+        }
+        .instruction {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>puisi kalau gaaada isinya ya jadi puasa</h1>
+
+    <button id="playButton">Putar Musik</button>
+    <p class="instruction">SOK PUTRI SAMBIL DENGER LAGU BACA NYA</p>
+
+    <div class="puisi">
+        <h2>Selamat</h2>
+        <p>
+            heran jika ku terus meminta<br>
+            melewati segala celah susahnya mengerti<br>
+            begitu amat curam nya sudut pandang ku<br>
+            terhadap apa itu sederhana nya mencitai seorang wanita sepertimu.
+        </p>
+    </div>
+
+    <div class="puisi">
+        <h2>Ulang</h2>
+        <p>
+            seutuh utuh nya waktu dan langit<br>
+            mereka tetap tidak abadi,<br>
+            seolah kita terus berayun tanpa henti<br>
+            di waktu dan langit yang sama<br>
+            terus bersinggung an tapi tak sempat mendekap.
+        </p>
+    </div>
+
+    <div class="puisi">
+        <h2>Tahun</h2>
+        <p>
+            beruraian segala kepekaan,<br>
+            tak sadar bila berlama lama, itu tidak akan baik<br>
+            begitu sebaliknya<br>
+            terlalu cepat, itu tidak pantas<br>
+            sabarlah, kau fikir aku tak mau,<br>
+            ketahuilah, aku jauh lebih besar dari kata rindu<br>
+            jauh lebih dekat dari dekap<br>
+            jauh lebih hebat dari khawatir<br>
+            aku adalah bentuk INGIN yang membabi buta<br>
+            tapi sadar melebihi nya.
+        </p>
+    </div>
+
+    <div class="puisi">
+        <h2>Putri</h2>
+        <p>
+            pada dasarnya hidup terus berjalan<br>
+            antara semua poros waktu dan jeda nya<br>
+            semua garis tawa dan hentinya<br>
+            setara ataupun tak serasi<br>
+            baik ataupun buruknya<br>
+            semua ada kalanya, seperti<br>
+            guncang ku pada akasa memimta mendekap mu diantara segala rasi dan musim<br>
+            agar tetap terjaga tawa dan riangmu.
+        </p>
+    </div>
+
+    <audio id="audioPlayer" loop>
+        <source src="Waking Up Together With You.mp3" type="audio/mpeg">
+        <source src="Yahya - keepyousafe (Lyric Video).mp3" type="audio/ogg">
+        Browser Anda tidak mendukung tag audio. Silakan perbarui browser Anda atau gunakan browser lain.
+    </audio>
+    
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('playButton');
+        let isPlaying = false;
+
+        playButton.addEventListener('click', function() {
+            if (isPlaying) {
+                audioPlayer.pause();
+                playButton.textContent = 'Putar Musik';
+                isPlaying = false;
+            } else {
+                audioPlayer.play().then(() => {
+                    playButton.textContent = 'Jeda Musik';
+                    isPlaying = true;
+                }).catch(function(error) {
+                    console.log("Pemutaran audio gagal: ", error);
+                    alert("Maaf, terjadi kesalahan saat memutar audio. Silakan coba lagi.");
+                });
+            }
+        });
+
+        // Hentikan audio ketika halaman akan ditutup
+        window.addEventListener('beforeunload', function() {
+            audioPlayer.pause();
+        });
+    </script>
+</body>
+</html>
