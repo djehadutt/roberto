@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ini mah puisi biasa </title>
+    <title>ini mah puisi biasa</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #000;
+            color: #fff;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
         .content-wrapper {
             position: relative;
@@ -19,26 +20,23 @@
             margin: 0 auto;
             padding: 20px;
         }
-        h1, h2 {
+        h1 {
             text-align: center;
-            color: #000;
-            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+            color: #fff;
+            text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
         }
         .puisi {
             margin-bottom: 30px;
             text-align: left;
         }
-        .puisi p {
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
-        }
-        .instruction, .end-message, .birthday-wish {
-            text-align: center;
-            font-style: italic;
-            color: #000;
-            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
-        }
-        .birthday-wish {
+        .puisi h2 {
+            color: #fff;
             font-weight: bold;
+            margin-top: 0;
+            text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+        }
+        .puisi p {
+            text-shadow: 0 0 5px #000, 0 0 10px #000, 0 0 15px #000;
         }
         audio {
             width: 100%;
@@ -46,7 +44,7 @@
         }
         #playButton {
             display: block;
-            margin: 20px auto;
+            margin: 20px auto 10px;
             padding: 10px 20px;
             font-size: 16px;
             background-color: #3498db;
@@ -58,59 +56,118 @@
         #playButton:hover {
             background-color: #2980b9;
         }
+        .instruction {
+            text-align: center;
+            font-style: italic;
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 0 0 5px #000, 0 0 10px #000;
+        }
+        .end-message {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #fff;
+            text-shadow: 0 0 5px #000, 0 0 10px #000;
+        }
+        .birthday-wish {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000;
+        }
         #backgroundVideo {
             position: fixed;
-            right: 0;
-            bottom: 0;
+            top: 50%;
+            left: 50%;
             min-width: 100%;
             min-height: 100%;
+            width: auto;
+            height: auto;
             z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
             object-fit: cover;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
-    <video id="backgroundVideo" autoplay loop muted>
+    <video id="backgroundVideo" autoplay loop muted playsinline>
+        <source src="Two Time - Animation Meme.mp4" type="video/mp4">
+    </video>
 
     <div class="content-wrapper">
-        <h1>puisi kalau gaada isinya jadi puasa</h1>
+        <h1>puisi kalau gaaada isinya ya jadi puasa</h1>
+
         <button id="playButton">Putar Musik</button>
-        <p class="instruction">sok sambil denger musik bacanya putri.</p>
+        <p class="instruction">SOK PUTRI SAMBIL DENGER LAGU BACA NYA</p>
 
         <div class="puisi">
             <h2>Selamat</h2>
-            <p>heran jika ku terus meminta<br>melewati segala celah susahnya mengerti<br>begitu amat curamnya sudut pandangku<br>terhadap apa itu sederhana mencintai seorang wanita sepertimu.</p>
+            <p>
+                heran jika ku terus meminta<br>
+                melewati segala celah susahnya mengerti<br>
+                begitu amat curam nya sudut pandang ku<br>
+                terhadap apa itu sederhana nya mencitai seorang wanita sepertimu.
+            </p>
         </div>
 
         <div class="puisi">
             <h2>Ulang</h2>
-            <p>seutuh-utuhnya waktu dan langit<br>mereka tetap tidak abadi,<br>seolah kita terus berayun tanpa henti<br>di waktu dan langit yang sama.<br>terus bersinggungan tapi tak sempat mendekap.</p>
+            <p>
+                seutuh utuh nya waktu dan langit<br>
+                mereka tetap tidak abadi,<br>
+                seolah kita terus berayun tanpa henti<br>
+                di waktu dan langit yang sama<br>
+                terus bersinggung an tapi tak sempat mendekap.
+            </p>
         </div>
 
         <div class="puisi">
             <h2>Tahun</h2>
-            <p>berurai segala kepekaan,<br>tak sadar bila berlama-lama, itu tidak akan baik.<br>terlalu cepat, itu tidak pantas.<br>sabarlah, kau fikir aku tak mau.<br>ketahuilah, aku jauh lebih besar dari kata rindu,<br>jauh lebih dekat dari dekap,<br>jauh lebih hebat dari khawatir.<br>aku adalah bentuk ingin yang membabi buta<br>tapi sadar melebihinya.</p>
+            <p>
+                beruraian segala kepekaan,<br>
+                tak sadar bila berlama lama, itu tidak akan baik<br>
+                begitu sebaliknya<br>
+                terlalu cepat, itu tidak pantas<br>
+                sabarlah, kau fikir aku tak mau,<br>
+                ketahuilah, aku jauh lebih besar dari kata rindu<br>
+                jauh lebih dekat dari dekap<br>
+                jauh lebih hebat dari khawatir<br>
+                aku adalah bentuk INGIN yang membabi buta<br>
+                tapi sadar melebihi nya.
+            </p>
         </div>
 
         <div class="puisi">
             <h2>Putri</h2>
-            <p>pada dasarnya hidup terus berjalan<br>antara semua poros waktu dan jedanya<br>semua garis tawa dan hentinya.<br>baik ataupun buruknya,<br>semua ada kalanya.<br>seperti guncangku pada akasa<br>meminta mendekapmu di antara segala rasi dan musim<br>agar tetap terjaga tawa dan riangmu.</p>
+            <p>
+                pada dasarnya hidup terus berjalan<br>
+                antara semua poros waktu dan jeda nya<br>
+                semua garis tawa dan hentinya<br>
+                setara ataupun tak serasi<br>
+                baik ataupun buruknya<br>
+                semua ada kalanya, seperti<br>
+                guncang ku pada akasa memimta mendekap mu diantara segala rasi dan musim<br>
+                agar tetap terjaga tawa dan riangmu.
+            </p>
         </div>
 
-        <p class="end-message">kalau udah selesai bacanya di ulang ulang aja sampai bosan, nanti juga lupa hehehe .</p>
-        <p class="birthday-wish">happy birthday putri, God bless u, insyaalah amin.</p>
+        <p class="end-message">Kalau udah baca sampai selesai ulang ulang aja sampai bosan hahaha nanti juga lupa</p>
+        
+        <p class="birthday-wish">HBD God bless u selalu amin, insyaallah.</p>
 
         <audio id="audioPlayer" loop>
             <source src="Waking Up Together With You.mp3" type="audio/mpeg">
             <source src="Yahya - keepyousafe (Lyric Video).mp3" type="audio/ogg">
-            Browser Anda tidak mendukung tag audio.
+            Browser Anda tidak mendukung tag audio. Silakan perbarui browser Anda atau gunakan browser lain.
         </audio>
-
-    </div> 
-
+    </div>
     <script>
         const audioPlayer = document.getElementById('audioPlayer');
         const playButton = document.getElementById('playButton');
+        const backgroundVideo = document.getElementById('backgroundVideo');
         let isPlaying = false;
 
         playButton.addEventListener('click', function() {
@@ -123,13 +180,16 @@
                     playButton.textContent = 'Jeda Musik';
                     isPlaying = true;
                 }).catch(function(error) {
-                    alert("Maaf, terjadi kesalahan saat memutar audio.");
+                    console.log("Pemutaran audio gagal: ", error);
+                    alert("Maaf, terjadi kesalahan saat memutar audio. Silakan coba lagi.");
                 });
             }
         });
 
+        // Hentikan audio dan video ketika halaman akan ditutup
         window.addEventListener('beforeunload', function() {
             audioPlayer.pause();
+            backgroundVideo.pause();
         });
     </script>
 </body>
