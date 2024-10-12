@@ -8,15 +8,21 @@
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f4f4f4;
         }
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: #000;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
         }
         .puisi {
             margin-bottom: 30px;
@@ -26,6 +32,10 @@
             color: #000;
             font-weight: bold;
             margin-top: 0;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        }
+        .puisi p {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
         }
         audio {
             width: 100%;
@@ -48,93 +58,115 @@
         .instruction {
             text-align: center;
             font-style: italic;
-            color: #555;
+            color: #000;
             margin-bottom: 20px;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         .end-message {
             text-align: center;
             margin-top: 30px;
             font-style: italic;
-            color: #555;
+            color: #000;
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff;
         }
         .birthday-wish {
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
-            color: #2c3e50;
+            color: #000;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        }
+        #backgroundVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            object-fit: cover;
         }
     </style>
 </head>
 <body>
-    <h1>puisi kalau gaaada isinya ya jadi puasa</h1>
+    <video id="backgroundVideo" autoplay loop muted>
+        <source src="Your Name 4K Live wallpaper.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-    <button id="playButton">Putar Musik</button>
-    <p class="instruction">SOK PUTRI SAMBIL DENGER LAGU BACA NYA</p>
+    <div class="content-wrapper">
+        <h1>puisi kalau gaaada isinya ya jadi puasa</h1>
 
-    <div class="puisi">
-        <h2>Selamat</h2>
-        <p>
-            heran jika ku terus meminta<br>
-            melewati segala celah susahnya mengerti<br>
-            begitu amat curam nya sudut pandang ku<br>
-            terhadap apa itu sederhana nya mencitai seorang wanita sepertimu.
-        </p>
+        <button id="playButton">Putar Musik</button>
+        <p class="instruction">SOK PUTRI SAMBIL DENGER LAGU BACA NYA</p>
+
+        <div class="puisi">
+            <h2>Selamat</h2>
+            <p>
+                heran jika ku terus meminta<br>
+                melewati segala celah susahnya mengerti<br>
+                begitu amat curam nya sudut pandang ku<br>
+                terhadap apa itu sederhana nya mencitai seorang wanita sepertimu.
+            </p>
+        </div>
+
+        <div class="puisi">
+            <h2>Ulang</h2>
+            <p>
+                seutuh utuh nya waktu dan langit<br>
+                mereka tetap tidak abadi,<br>
+                seolah kita terus berayun tanpa henti<br>
+                di waktu dan langit yang sama<br>
+                terus bersinggung an tapi tak sempat mendekap.
+            </p>
+        </div>
+
+        <div class="puisi">
+            <h2>Tahun</h2>
+            <p>
+                beruraian segala kepekaan,<br>
+                tak sadar bila berlama lama, itu tidak akan baik<br>
+                begitu sebaliknya<br>
+                terlalu cepat, itu tidak pantas<br>
+                sabarlah, kau fikir aku tak mau,<br>
+                ketahuilah, aku jauh lebih besar dari kata rindu<br>
+                jauh lebih dekat dari dekap<br>
+                jauh lebih hebat dari khawatir<br>
+                aku adalah bentuk INGIN yang membabi buta<br>
+                tapi sadar melebihi nya.
+            </p>
+        </div>
+
+        <div class="puisi">
+            <h2>Putri</h2>
+            <p>
+                pada dasarnya hidup terus berjalan<br>
+                antara semua poros waktu dan jeda nya<br>
+                semua garis tawa dan hentinya<br>
+                setara ataupun tak serasi<br>
+                baik ataupun buruknya<br>
+                semua ada kalanya, seperti<br>
+                guncang ku pada akasa memimta mendekap mu diantara segala rasi dan musim<br>
+                agar tetap terjaga tawa dan riangmu.
+            </p>
+        </div>
+
+        <p class="end-message">Kalau udah baca sampai selesai ulang ulang aja sampai bosan hahaha nanti juga lupa</p>
+        
+        <p class="birthday-wish">HBD God bless u selalu amin, insyaallah.</p>
+
+        <audio id="audioPlayer" loop>
+            <source src="Waking Up Together With You.mp3" type="audio/mpeg">
+            <source src="Yahya - keepyousafe (Lyric Video).mp3" type="audio/ogg">
+            Browser Anda tidak mendukung tag audio. Silakan perbarui browser Anda atau gunakan browser lain.
+        </audio>
     </div>
-
-    <div class="puisi">
-        <h2>Ulang</h2>
-        <p>
-            seutuh utuh nya waktu dan langit<br>
-            mereka tetap tidak abadi,<br>
-            seolah kita terus berayun tanpa henti<br>
-            di waktu dan langit yang sama<br>
-            terus bersinggung an tapi tak sempat mendekap.
-        </p>
-    </div>
-
-    <div class="puisi">
-        <h2>Tahun</h2>
-        <p>
-            beruraian segala kepekaan,<br>
-            tak sadar bila berlama lama, itu tidak akan baik<br>
-            begitu sebaliknya<br>
-            terlalu cepat, itu tidak pantas<br>
-            sabarlah, kau fikir aku tak mau,<br>
-            ketahuilah, aku jauh lebih besar dari kata rindu<br>
-            jauh lebih dekat dari dekap<br>
-            jauh lebih hebat dari khawatir<br>
-            aku adalah bentuk INGIN yang membabi buta<br>
-            tapi sadar melebihi nya.
-        </p>
-    </div>
-
-    <div class="puisi">
-        <h2>Putri</h2>
-        <p>
-            pada dasarnya hidup terus berjalan<br>
-            antara semua poros waktu dan jeda nya<br>
-            semua garis tawa dan hentinya<br>
-            setara ataupun tak serasi<br>
-            baik ataupun buruknya<br>
-            semua ada kalanya, seperti<br>
-            guncang ku pada akasa memimta mendekap mu diantara segala rasi dan musim<br>
-            agar tetap terjaga tawa dan riangmu.
-        </p>
-    </div>
-
-    <p class="end-message">Kalau udah baca sampai selesai ulang ulang aja sampai bosan hahaha nanti juga lupa</p>
-    
-    <p class="birthday-wish">HBD God bless u selalu amin, insyaallah.</p>
-
-    <audio id="audioPlayer" loop>
-        <source src="Waking Up Together With You.mp3" type="audio/mpeg">
-        <source src="Yahya - keepyousafe (Lyric Video).mp3" type="audio/ogg">
-        Browser Anda tidak mendukung tag audio. Silakan perbarui browser Anda atau gunakan browser lain.
-    </audio>
     
     <script>
         const audioPlayer = document.getElementById('audioPlayer');
         const playButton = document.getElementById('playButton');
+        const backgroundVideo = document.getElementById('backgroundVideo');
         let isPlaying = false;
 
         playButton.addEventListener('click', function() {
@@ -153,9 +185,10 @@
             }
         });
 
-        // Hentikan audio ketika halaman akan ditutup
+        // Hentikan audio dan video ketika halaman akan ditutup
         window.addEventListener('beforeunload', function() {
             audioPlayer.pause();
+            backgroundVideo.pause();
         });
     </script>
 </body>
